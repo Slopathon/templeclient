@@ -1,0 +1,3916 @@
+{
+ "Aim Assist": {
+  "description": "Gently pulls your aim toward the nearest target while you fight. You still do the clicking.",
+  "settings": [
+   {
+    "key": "Range",
+    "type": "range",
+    "label": "Assist range",
+    "info": "How far away a target can be.",
+    "min": 1,
+    "max": 20,
+    "default": 5,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "FOV",
+    "type": "range",
+    "label": "Field of view",
+    "info": "Only targets within this angle of where you look.",
+    "min": 1,
+    "max": 360,
+    "default": 90,
+    "unit": "°",
+    "group": "Targeting"
+   },
+   {
+    "key": "Horizontal Speed",
+    "type": "range",
+    "label": "Yaw speed",
+    "info": "How quickly it turns you left and right.",
+    "min": 1,
+    "max": 20,
+    "default": 10,
+    "group": "Aim"
+   },
+   {
+    "key": "Aim Horizontally",
+    "type": "check",
+    "label": "Turn sideways",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Vertical Speed",
+    "type": "range",
+    "label": "Pitch speed",
+    "info": "How quickly it turns you up and down.",
+    "min": 1,
+    "max": 20,
+    "default": 10,
+    "showif": [
+     "Aim Vertically",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Aim Vertically",
+    "type": "check",
+    "label": "Turn up and down",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Aim At",
+    "type": "select",
+    "label": "Aim point",
+    "info": "Which part of the target to aim at.",
+    "options": [
+     "Closest",
+     "Center"
+    ],
+    "default": "Closest",
+    "optionLabels": {
+     "Closest": "Nearest point",
+     "Center": "Middle"
+    },
+    "group": "Aim"
+   },
+   {
+    "key": "Silent Rotations",
+    "type": "check",
+    "label": "Server-side aim",
+    "info": "Turn only on the server; your camera stays where it is.",
+    "default": false,
+    "group": "Aim"
+   },
+   {
+    "key": "Only Weapon",
+    "type": "check",
+    "label": "Weapon in hand only",
+    "info": "Only works with a sword, axe, mace or spear in hand.",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Not in GUI",
+    "type": "check",
+    "label": "Pause in menus",
+    "info": "Does nothing while a menu or inventory is open.",
+    "default": true,
+    "group": "Conditions",
+    "fixed": true
+   },
+   {
+    "key": "Not While Using",
+    "type": "check",
+    "label": "Pause while using items",
+    "info": "Does nothing while you eat, drink, block or draw a bow.",
+    "default": false,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Anti Bot": {
+  "description": "Stops combat modules from going after fake players that anti-cheat plugins spawn.",
+  "settings": [
+   {
+    "key": "Not in Tab List",
+    "type": "check",
+    "label": "Missing from tab list",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Invalid Ping",
+    "type": "check",
+    "label": "Odd ping",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Invalid UUID",
+    "type": "check",
+    "label": "Odd UUID",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "No Skin",
+    "type": "check",
+    "label": "No skin",
+    "default": false,
+    "group": "General"
+   }
+  ]
+ },
+ "Auto Anchor": {
+  "description": "Charges and sets off respawn anchors for you in anchor PvP.",
+  "settings": [
+   {
+    "key": "Anchor Mode",
+    "type": "select",
+    "label": "Anchor style",
+    "options": [
+     "Normal",
+     "Safe"
+    ],
+    "default": "Normal",
+    "optionLabels": {
+     "Normal": "Fast",
+     "Safe": "Safe"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Silent Bind",
+    "type": "keybind",
+    "label": "Server-side aim key",
+    "default": "None",
+    "showif": [
+     "Aim Mode",
+     "Silent"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Aim Mode",
+    "type": "select",
+    "label": "Aiming",
+    "options": [
+     "None",
+     "Silent"
+    ],
+    "default": "None",
+    "optionLabels": {
+     "None": "Off",
+     "Silent": "Server-side"
+    },
+    "group": "Aim"
+   },
+   {
+    "key": "Safe Aim Mode",
+    "type": "select",
+    "label": "Aiming in safe style",
+    "options": [
+     "Silent",
+     "None"
+    ],
+    "default": "Silent",
+    "optionLabels": {
+     "None": "Off",
+     "Silent": "Server-side"
+    },
+    "showif": [
+     "Anchor Mode",
+     "Safe"
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Rotation Speed",
+    "type": "range",
+    "label": "Turn speed",
+    "info": "How fast it turns you, in degrees per tick.",
+    "min": 10,
+    "max": 180,
+    "default": 180,
+    "step": 5,
+    "unit": "°",
+    "group": "Aim"
+   },
+   {
+    "key": "Explode Delay",
+    "type": "range",
+    "label": "Detonate delay",
+    "min": 0,
+    "max": 200,
+    "default": 0,
+    "unit": " ms",
+    "group": "Timing"
+   }
+  ]
+ },
+ "Auto Clicker": {
+  "description": "Clicks for you while you hold attack, at a randomised rate.",
+  "settings": [
+   {
+    "key": "CPS",
+    "type": "minmax",
+    "label": "Clicks per second",
+    "info": "Clicks per second, picked at random between the two.",
+    "min": 1,
+    "max": 30,
+    "low": 9,
+    "high": 12,
+    "unit": " cps",
+    "group": "Timing"
+   },
+   {
+    "key": "Only Weapon",
+    "type": "check",
+    "label": "Weapon in hand only",
+    "info": "Only works with a sword, axe, mace or spear in hand.",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Stop On Break",
+    "type": "check",
+    "label": "Pause while mining",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Not in GUI",
+    "type": "check",
+    "label": "Pause in menus",
+    "info": "Does nothing while a menu or inventory is open.",
+    "default": true,
+    "group": "Conditions",
+    "fixed": true
+   },
+   {
+    "key": "Not While Using",
+    "type": "check",
+    "label": "Pause while using items",
+    "info": "Does nothing while you eat, drink, block or draw a bow.",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Auto Crystal": {
+  "description": "Places and pops end crystals on obsidian or bedrock you are looking at.",
+  "settings": [
+   {
+    "key": "Head Bob",
+    "type": "check",
+    "label": "Look-down bob",
+    "info": "Looks down at the crystal like a player would.",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Rotation Speed",
+    "type": "range",
+    "label": "Turn speed",
+    "info": "How fast it turns you, in degrees per tick.",
+    "min": 10,
+    "max": 180,
+    "default": 180,
+    "step": 5,
+    "unit": "°",
+    "showif": [
+     "Head Bob",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Place Delay",
+    "type": "minmax",
+    "label": "Place delay",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 100,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Break Delay",
+    "type": "minmax",
+    "label": "Pop delay",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 100,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Switch Delay",
+    "type": "minmax",
+    "label": "Swap to crystal delay",
+    "min": 0,
+    "max": 500,
+    "low": 1,
+    "high": 50,
+    "step": 1,
+    "unit": " ms",
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 100,
+    "step": 1,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Work with Crystal",
+    "type": "check",
+    "label": "Holding crystals",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Sword",
+    "type": "check",
+    "label": "Holding a sword",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Totem",
+    "type": "check",
+    "label": "Holding a totem",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Fist",
+    "type": "check",
+    "label": "Empty hand",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Stop On Kill",
+    "type": "check",
+    "label": "Stop after a kill",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Auto Hit Crystal": {
+  "description": "Puts down obsidian and a crystal for Auto Crystal to pop.",
+  "settings": [
+   {
+    "key": "Place Obsidian Delay",
+    "type": "minmax",
+    "label": "Obsidian delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 25,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Place Delay",
+    "type": "minmax",
+    "label": "Crystal delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 25,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Break Delay",
+    "type": "minmax",
+    "label": "Pop delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 25,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Work with Crystal",
+    "type": "check",
+    "label": "Holding crystals",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Obsidian",
+    "type": "check",
+    "label": "Holding obsidian",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Sword",
+    "type": "check",
+    "label": "Holding a sword",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Totem",
+    "type": "check",
+    "label": "Holding a totem",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Work with Fist",
+    "type": "check",
+    "label": "Empty hand",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Auto Jump Reset": {
+  "description": "Jumps the moment you take knockback, which cuts how far you fly.",
+  "settings": [
+   {
+    "key": "Chance",
+    "type": "range",
+    "label": "Jump chance",
+    "info": "How often it happens.",
+    "min": 0,
+    "max": 100,
+    "default": 100,
+    "unit": "%",
+    "group": "Timing"
+   }
+  ]
+ },
+ "Auto Lunge": {
+  "description": "Does spear lunges for you, swapping in the spear and back.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Lunge style",
+    "options": [
+     "Normal",
+     "Grim"
+    ],
+    "default": "Normal",
+    "optionLabels": {
+     "Normal": "Standard",
+     "Grim": "Grim safe"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Lunge Bind",
+    "type": "keybind",
+    "label": "Lunge key",
+    "default": "NONE",
+    "group": "General"
+   },
+   {
+    "key": "Bind Hold Loop",
+    "type": "check",
+    "label": "Repeat while held",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Charge %",
+    "type": "range",
+    "label": "Spear charge",
+    "min": 1,
+    "max": 100,
+    "default": 95,
+    "unit": "%",
+    "showif": [
+     "Mode",
+     "Grim"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Hold Loop Delay",
+    "type": "minmax",
+    "label": "Repeat delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 100,
+    "unit": " ms",
+    "showif": [
+     "Bind Hold Loop",
+     true
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Cooldown %",
+    "type": "range",
+    "label": "Attack charge",
+    "min": 0,
+    "max": 100,
+    "default": 85,
+    "unit": "%",
+    "showif": [
+     "Mode",
+     "Normal"
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Swap Delay",
+    "type": "minmax",
+    "label": "Switch delay",
+    "info": "Wait before switching items.",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "unit": " ms",
+    "showif": [
+     "Mode",
+     "Normal"
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 100,
+    "high": 100,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Stabs Per Swap",
+    "type": "range",
+    "label": "Stabs per swap",
+    "min": 1,
+    "max": 100,
+    "default": 1,
+    "showif": [
+     "Mode",
+     "Grim"
+    ],
+    "group": "Inventory"
+   }
+  ]
+ },
+ "Auto Mace": {
+  "description": "Swaps to the mace for the hit when a slam would land, then swaps back.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Trigger",
+    "options": [
+     "Kill Aura",
+     "Triggerbot"
+    ],
+    "default": "Kill Aura",
+    "optionLabels": {
+     "Kill Aura": "Aura",
+     "Triggerbot": "Crosshair"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Snap When Close",
+    "type": "check",
+    "label": "Snap aim up close",
+    "default": true,
+    "showif": [
+     "Mode",
+     "Kill Aura"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Stun Slam",
+    "type": "check",
+    "label": "Shield stun slam",
+    "info": "Uses the slam to stun a blocking shield.",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Range",
+    "type": "range",
+    "label": "Hit range",
+    "info": "How far away a target can be.",
+    "min": 2.0,
+    "max": 6.0,
+    "default": 4.0,
+    "step": 0.1,
+    "unit": " b",
+    "showif": [
+     "Mode",
+     "Kill Aura"
+    ],
+    "group": "Targeting"
+   },
+   {
+    "key": "Min Fall Distance",
+    "type": "range",
+    "label": "Min fall height",
+    "info": "How far you must fall first.",
+    "min": 0.5,
+    "max": 20.0,
+    "default": 1.5,
+    "step": 0.5,
+    "unit": " b",
+    "showif": [
+     "Only Off Ground",
+     true
+    ],
+    "group": "Targeting"
+   },
+   {
+    "key": "Density Fall Distance",
+    "type": "range",
+    "label": "Density from height",
+    "min": 1.0,
+    "max": 30.0,
+    "default": 5.0,
+    "step": 0.5,
+    "unit": " b",
+    "showif": [
+     "Mace",
+     "Dynamic"
+    ],
+    "group": "Targeting"
+   },
+   {
+    "key": "Rotation Speed",
+    "type": "range",
+    "label": "Turn speed",
+    "info": "How fast it turns you, in degrees per tick.",
+    "min": 10,
+    "max": 180,
+    "default": 180,
+    "step": 5,
+    "unit": "°",
+    "showif": [
+     "Mode",
+     "Kill Aura"
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Cooldown Threshold",
+    "type": "range",
+    "label": "Attack charge",
+    "info": "How charged your attack must be before it hits.",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.9,
+    "step": 0.05,
+    "scale": 100.0,
+    "unit": "%",
+    "group": "Timing"
+   },
+   {
+    "key": "Mace",
+    "type": "select",
+    "label": "Mace to use",
+    "options": [
+     "Dynamic",
+     "Breach",
+     "Density",
+     "Any"
+    ],
+    "default": "Dynamic",
+    "optionLabels": {
+     "Dynamic": "Best for the fall",
+     "Breach": "Breach",
+     "Density": "Density",
+     "Any": "Any mace"
+    },
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 150,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Only Off Ground",
+    "type": "check",
+    "label": "Only while falling",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Check Shield",
+    "type": "check",
+    "label": "Hold off on shields",
+    "info": "Doesn't swap for players who are blocking with a shield.",
+    "default": true,
+    "showif": [
+     "Stun Slam",
+     false
+    ],
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Auto Spear Dtap": {
+  "description": "After a charged spear hit, swaps to a mace for a quick follow-up and swaps back.",
+  "settings": [
+   {
+    "key": "Min Mace Charge %",
+    "type": "range",
+    "label": "Min mace charge",
+    "min": 0,
+    "max": 100,
+    "default": 0,
+    "unit": "%",
+    "group": "General"
+   },
+   {
+    "key": "Max Distance",
+    "type": "range",
+    "label": "Max distance",
+    "min": 1.0,
+    "max": 6.0,
+    "default": 3.5,
+    "step": 0.1,
+    "unit": " b",
+    "showif": [
+     "Legit",
+     true
+    ],
+    "group": "Targeting"
+   },
+   {
+    "key": "Humanize",
+    "type": "check",
+    "label": "Human-like",
+    "info": "Adds small human-like imperfections.",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Click Delay",
+    "type": "minmax",
+    "label": "Hit delay",
+    "min": 0,
+    "max": 500,
+    "low": 20,
+    "high": 60,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Chance %",
+    "type": "range",
+    "label": "Chance",
+    "min": 1,
+    "max": 100,
+    "default": 100,
+    "unit": "%",
+    "showif": [
+     "Legit",
+     true
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Cooldown",
+    "type": "range",
+    "label": "Rest between combos",
+    "min": 0,
+    "max": 2000,
+    "default": 250,
+    "step": 50,
+    "unit": " ms",
+    "showif": [
+     "Legit",
+     true
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Mace Swap Delay",
+    "type": "minmax",
+    "label": "Mace swap delay",
+    "min": 0,
+    "max": 500,
+    "low": 20,
+    "high": 60,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 120,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Legit",
+    "type": "check",
+    "label": "Legit timing",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Only Players",
+    "type": "check",
+    "label": "Players only",
+    "default": true,
+    "showif": [
+     "Legit",
+     true
+    ],
+    "group": "Conditions"
+   },
+   {
+    "key": "Require Crosshair",
+    "type": "check",
+    "label": "Needs crosshair on them",
+    "default": true,
+    "showif": [
+     "Legit",
+     true
+    ],
+    "group": "Conditions"
+   },
+   {
+    "key": "Skip Shielding",
+    "type": "check",
+    "label": "Skip blocking players",
+    "default": true,
+    "showif": [
+     "Legit",
+     true
+    ],
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Auto Trap": {
+  "description": "Boxes in nearby enemies with blocks.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Placing",
+    "options": [
+     "Instant",
+     "Legit"
+    ],
+    "default": "Instant",
+    "optionLabels": {
+     "Instant": "Instant",
+     "Legit": "One at a time"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Piercing",
+    "type": "check",
+    "label": "Place through entities",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Floor",
+    "type": "check",
+    "label": "Cover the floor",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Roof",
+    "type": "check",
+    "label": "Cover the top",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Range",
+    "type": "range",
+    "label": "Trap range",
+    "info": "How far away a target can be.",
+    "min": 2.0,
+    "max": 8.0,
+    "default": 5.0,
+    "step": 0.1,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Blocks Per Tick",
+    "type": "range",
+    "label": "Blocks per tick",
+    "min": 1,
+    "max": 10,
+    "default": 4,
+    "showif": [
+     "Mode",
+     "Instant"
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Place Delay",
+    "type": "range",
+    "label": "Place delay",
+    "min": 0,
+    "max": 500,
+    "default": 0,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Block Whitelist",
+    "type": "check",
+    "label": "Only listed blocks",
+    "default": false,
+    "group": "Inventory"
+   },
+   {
+    "key": "Whitelist Blocks",
+    "type": "itempicker",
+    "label": "Allowed blocks",
+    "default": [],
+    "showif": [
+     "Block Whitelist",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap",
+    "type": "check",
+    "label": "Switch to blocks",
+    "info": "Switches to the blocks it needs.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Delay",
+    "type": "minmax",
+    "label": "Switch delay",
+    "info": "Wait before switching items.",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "unit": " ms",
+    "showif": [
+     "Swap",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "showif": [
+     "Swap",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 150,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Render",
+    "type": "check",
+    "label": "Show preview",
+    "info": "Draws a preview in the world.",
+    "default": false,
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Mode",
+    "type": "select",
+    "label": "Preview style",
+    "options": [
+     "Flat",
+     "Glow Edges",
+     "Gradient",
+     "Shimmer",
+     "Pulse",
+     "Neon"
+    ],
+    "default": "Glow Edges",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Color",
+    "type": "color",
+    "label": "Preview colour",
+    "default": "#3a7fcc",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Second Color",
+    "type": "color",
+    "label": "Second colour",
+    "default": "#9b6bff",
+    "showifOr": [
+     "Render Mode",
+     [
+      "Gradient",
+      "Pulse",
+      "Neon"
+     ]
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Fill Opacity",
+    "type": "range",
+    "label": "Fill strength",
+    "info": "How solid the fill is.",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.35,
+    "step": 0.05,
+    "scale": 100.0,
+    "unit": "%",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Outline Opacity",
+    "type": "range",
+    "label": "Edge strength",
+    "info": "How solid the edges are.",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.9,
+    "step": 0.05,
+    "scale": 100.0,
+    "unit": "%",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Fade Time",
+    "type": "range",
+    "label": "Fade out",
+    "info": "How long the preview takes to fade.",
+    "min": 200,
+    "max": 3000,
+    "default": 750,
+    "step": 50,
+    "unit": " ms",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Grow Animation",
+    "type": "check",
+    "label": "Grow in",
+    "default": true,
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Through Walls",
+    "type": "check",
+    "label": "Show through walls",
+    "info": "Draws the preview through blocks.",
+    "default": false,
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   }
+  ]
+ },
+ "Auto Xbow": {
+  "description": "Rail, TNT minecart, lighter, then a crossbow shot into it. Starts when you place a rail or press a key.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Start on",
+    "options": [
+     "Rail",
+     "Bind"
+    ],
+    "default": "Rail",
+    "optionLabels": {
+     "Rail": "On rail place",
+     "Bind": "On key press"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Bind",
+    "type": "keybind",
+    "label": "Start key",
+    "default": "NONE",
+    "showif": [
+     "Mode",
+     "Bind"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Shot Hold",
+    "type": "range",
+    "label": "Hold before shot",
+    "min": 0,
+    "max": 6,
+    "default": 2,
+    "step": 1,
+    "group": "General"
+   },
+   {
+    "key": "Auto Aim",
+    "type": "check",
+    "label": "Aim for you",
+    "default": false,
+    "showif": [
+     "Mode",
+     "Bind"
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Silent Rotations",
+    "type": "check",
+    "label": "Server-side aim",
+    "info": "Turn only on the server; your camera stays where it is.",
+    "default": true,
+    "group": "Aim"
+   },
+   {
+    "key": "Rotation Speed",
+    "type": "range",
+    "label": "Turn speed",
+    "info": "How fast it turns you, in degrees per tick.",
+    "min": 10,
+    "max": 180,
+    "default": 60,
+    "step": 5,
+    "unit": "°",
+    "group": "Aim"
+   },
+   {
+    "key": "Humanize",
+    "type": "check",
+    "label": "Human-like",
+    "info": "Adds small human-like imperfections.",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Reaction Delay",
+    "type": "minmax",
+    "label": "Reaction time",
+    "info": "Pause before reacting to a new target.",
+    "min": 0,
+    "max": 500,
+    "low": 60,
+    "high": 180,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Speed Variation",
+    "type": "range",
+    "label": "Speed wobble",
+    "info": "Varies turn speed from moment to moment.",
+    "min": 0,
+    "max": 100,
+    "default": 25,
+    "step": 1,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Aim Jitter",
+    "type": "range",
+    "label": "Aim shake",
+    "min": 0,
+    "max": 100,
+    "default": 40,
+    "step": 1,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Step Delay",
+    "type": "minmax",
+    "label": "Step delay",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 130,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Shot Delay",
+    "type": "minmax",
+    "label": "Shot delay",
+    "min": 0,
+    "max": 500,
+    "low": 60,
+    "high": 160,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Cooldown",
+    "type": "range",
+    "label": "Rest between combos",
+    "min": 0,
+    "max": 5000,
+    "default": 1000,
+    "step": 100,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 150,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Safe",
+    "type": "check",
+    "label": "Safety checks",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Render",
+    "type": "check",
+    "label": "Show preview",
+    "info": "Draws a preview in the world.",
+    "default": true,
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Color",
+    "type": "color",
+    "label": "Preview colour",
+    "default": "#ff5533",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   }
+  ]
+ },
+ "Backtrack": {
+  "description": "Holds enemy movement for a moment so you can still hit where they just were.",
+  "settings": [
+   {
+    "key": "Range",
+    "type": "range",
+    "label": "Max distance",
+    "info": "How far away a target can be.",
+    "min": 0,
+    "max": 16,
+    "default": 6,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Delay",
+    "type": "minmax",
+    "label": "Hold time",
+    "info": "How long to hold before sending.",
+    "min": 0,
+    "max": 1000,
+    "low": 150,
+    "high": 250,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Render",
+    "type": "check",
+    "label": "Show old position",
+    "info": "Draws a preview in the world.",
+    "default": true,
+    "group": "Visuals"
+   },
+   {
+    "key": "Fill",
+    "type": "check",
+    "label": "Fill box",
+    "default": true,
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Fill Color",
+    "type": "color",
+    "label": "Fill colour",
+    "default": "#3a7fcc",
+    "showif": [
+     "Fill",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Outline",
+    "type": "check",
+    "label": "Box edges",
+    "default": true,
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Outline Color",
+    "type": "color",
+    "label": "Edge colour",
+    "default": "#ffffff",
+    "showif": [
+     "Outline",
+     true
+    ],
+    "group": "Visuals"
+   }
+  ]
+ },
+ "Cart Assist": {
+  "description": "Puts a rail and TNT minecart where your flame arrow is going to land.",
+  "settings": [
+   {
+    "key": "Silent Rotations",
+    "type": "check",
+    "label": "Server-side aim",
+    "info": "Turn only on the server; your camera stays where it is.",
+    "default": true,
+    "group": "Aim"
+   },
+   {
+    "key": "Rotation Speed",
+    "type": "range",
+    "label": "Turn speed",
+    "info": "How fast it turns you, in degrees per tick.",
+    "min": 10,
+    "max": 180,
+    "default": 180,
+    "step": 5,
+    "unit": "°",
+    "group": "Aim"
+   },
+   {
+    "key": "Humanize",
+    "type": "check",
+    "label": "Human-like",
+    "info": "Adds small human-like imperfections.",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Reaction Delay",
+    "type": "minmax",
+    "label": "Reaction time",
+    "info": "Pause before reacting to a new target.",
+    "min": 0,
+    "max": 300,
+    "low": 0,
+    "high": 30,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Speed Variation",
+    "type": "range",
+    "label": "Speed wobble",
+    "info": "Varies turn speed from moment to moment.",
+    "min": 0,
+    "max": 100,
+    "default": 20,
+    "step": 1,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Aim Jitter",
+    "type": "range",
+    "label": "Aim shake",
+    "min": 0,
+    "max": 100,
+    "default": 40,
+    "step": 1,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Place Delay",
+    "type": "minmax",
+    "label": "Place delay",
+    "min": 0,
+    "max": 300,
+    "low": 0,
+    "high": 40,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 150,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Render",
+    "type": "check",
+    "label": "Show preview",
+    "info": "Draws a preview in the world.",
+    "default": true,
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Color",
+    "type": "color",
+    "label": "Preview colour",
+    "default": "#ff5533",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   }
+  ]
+ },
+ "Criticals": {
+  "description": "Times a tiny hop so your hits land as critical hits.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Style",
+    "options": [
+     "Normal",
+     "Stop Sprint"
+    ],
+    "default": "Normal",
+    "optionLabels": {
+     "Normal": "Hop",
+     "Stop Sprint": "Hop without sprint"
+    },
+    "group": "General"
+   }
+  ]
+ },
+ "Crystal Aura": {
+  "description": "Fully automatic crystal PvP: picks spots, places obsidian and crystals and pops them.",
+  "settings": [
+   {
+    "key": "Instant Break",
+    "type": "check",
+    "label": "Pop instantly",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Ping Compensation",
+    "type": "check",
+    "label": "Account for ping",
+    "info": "Adjusts timing for your ping.",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Place Obsidian",
+    "type": "check",
+    "label": "Place obsidian too",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Target Range",
+    "type": "range",
+    "label": "Search range",
+    "min": 3,
+    "max": 15,
+    "default": 9,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Break Range",
+    "type": "range",
+    "label": "Pop range",
+    "min": 1,
+    "max": 6,
+    "default": 4.5,
+    "step": 0.1,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Min Damage",
+    "type": "range",
+    "label": "Min target damage",
+    "min": 1,
+    "max": 36,
+    "default": 6,
+    "step": 0.5,
+    "unit": " hp",
+    "group": "Damage"
+   },
+   {
+    "key": "Max Self Damage",
+    "type": "range",
+    "label": "Max self damage",
+    "min": 0,
+    "max": 36,
+    "default": 8,
+    "step": 0.5,
+    "unit": " hp",
+    "group": "Damage"
+   },
+   {
+    "key": "Anti Suicide",
+    "type": "check",
+    "label": "Never kill yourself",
+    "info": "Never places a crystal that would kill you.",
+    "default": true,
+    "group": "Damage"
+   },
+   {
+    "key": "Safety Margin",
+    "type": "range",
+    "label": "Safety margin",
+    "min": 0,
+    "max": 10,
+    "default": 2,
+    "step": 0.5,
+    "unit": " hp",
+    "showif": [
+     "Anti Suicide",
+     true
+    ],
+    "group": "Damage"
+   },
+   {
+    "key": "Rotation Speed",
+    "type": "range",
+    "label": "Turn speed",
+    "info": "How fast it turns you, in degrees per tick.",
+    "min": 1,
+    "max": 30,
+    "default": 30,
+    "group": "Aim"
+   },
+   {
+    "key": "Max Turn Speed",
+    "type": "range",
+    "label": "Turn speed cap",
+    "info": "The fastest it will ever turn you.",
+    "min": 30,
+    "max": 1800,
+    "default": 1800,
+    "unit": "°",
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Humanize",
+    "type": "check",
+    "label": "Human-like",
+    "info": "Adds small human-like imperfections.",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Jitter",
+    "type": "range",
+    "label": "Shake",
+    "info": "Small random shakes in the aim.",
+    "min": 0,
+    "max": 100,
+    "default": 20,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Speed Variation",
+    "type": "range",
+    "label": "Speed wobble",
+    "info": "Varies turn speed from moment to moment.",
+    "min": 0,
+    "max": 100,
+    "default": 25,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Reaction Delay",
+    "type": "minmax",
+    "label": "Reaction time",
+    "info": "Pause before reacting to a new target.",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 50,
+    "step": 1,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Randomize Aim Point",
+    "type": "check",
+    "label": "Vary aim point",
+    "default": true,
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Actions Per Tick",
+    "type": "range",
+    "label": "Actions per tick",
+    "min": 1,
+    "max": 2,
+    "default": 1,
+    "step": 1,
+    "group": "Timing"
+   },
+   {
+    "key": "Obsidian Delay",
+    "type": "minmax",
+    "label": "Obsidian delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "step": 1,
+    "unit": " ms",
+    "showif": [
+     "Place Obsidian",
+     true
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Place Delay",
+    "type": "minmax",
+    "label": "Place delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Break Delay",
+    "type": "minmax",
+    "label": "Pop delay",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "step": 1,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Auto Switch",
+    "type": "check",
+    "label": "Switch to crystals",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Delay",
+    "type": "minmax",
+    "label": "Switch delay",
+    "info": "Wait before switching items.",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "step": 1,
+    "unit": " ms",
+    "showif": [
+     "Auto Switch",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "showif": [
+     "Auto Switch",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 100,
+    "step": 1,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Pause When Ineffective",
+    "type": "check",
+    "label": "Pause when pointless",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Airborne Only",
+    "type": "check",
+    "label": "Only on airborne targets",
+    "default": true,
+    "showif": [
+     "Place Obsidian",
+     true
+    ],
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Custom Rotations": {
+  "description": "Shapes how the aiming modules turn your head: how a turn starts, speeds up and settles.",
+  "settings": [
+   {
+    "key": "Preset",
+    "type": "select",
+    "label": "Curve",
+    "info": "The shape of each turn.",
+    "options": [
+     "Custom",
+     "Linear",
+     "Ease In",
+     "Ease Out",
+     "Ease In Out",
+     "Snap",
+     "Hesitate"
+    ],
+    "default": "Ease In Out",
+    "optionLabels": {
+     "Ease In Out": "Smooth",
+     "Ease In": "Slow start",
+     "Ease Out": "Slow finish"
+    },
+    "group": "Aim"
+   },
+   {
+    "key": "Custom Curve",
+    "type": "curve",
+    "label": "Curve points",
+    "info": "Points as percent of time:percent of turn, comma separated.",
+    "default": "25:16, 50:50, 75:84",
+    "group": "Aim"
+   },
+   {
+    "key": "Variate Aim",
+    "type": "check",
+    "label": "Drift aim",
+    "info": "Lets the aim drift a little while waiting to hit.",
+    "default": false,
+    "group": "Aim"
+   },
+   {
+    "key": "Variate Strength",
+    "type": "range",
+    "label": "Drift amount",
+    "min": 1,
+    "max": 15,
+    "default": 4,
+    "step": 1,
+    "showif": [
+     "Variate Aim",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Variate Lock At",
+    "type": "range",
+    "label": "Lock on at charge",
+    "min": 10,
+    "max": 80,
+    "default": 50,
+    "step": 5,
+    "showif": [
+     "Variate Aim",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Duration Variation",
+    "type": "range",
+    "label": "Time wobble",
+    "min": 0,
+    "max": 50,
+    "default": 10,
+    "step": 1,
+    "unit": "%",
+    "showifOr": [
+     "Preset",
+     [
+      "Linear",
+      "Ease In",
+      "Ease Out",
+      "Ease In Out",
+      "Snap",
+      "Hesitate"
+     ]
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Retarget Threshold",
+    "type": "range",
+    "label": "Restart turn after",
+    "min": 2,
+    "max": 60,
+    "default": 12,
+    "step": 1,
+    "unit": "°",
+    "showifOr": [
+     "Preset",
+     [
+      "Linear",
+      "Ease In",
+      "Ease Out",
+      "Ease In Out",
+      "Snap",
+      "Hesitate"
+     ]
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Base Duration",
+    "type": "range",
+    "label": "Turn time",
+    "min": 10,
+    "max": 500,
+    "default": 60,
+    "step": 5,
+    "unit": " ms",
+    "showifOr": [
+     "Preset",
+     [
+      "Linear",
+      "Ease In",
+      "Ease Out",
+      "Ease In Out",
+      "Snap",
+      "Hesitate"
+     ]
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Duration Per 90",
+    "type": "range",
+    "label": "Extra time per 90°",
+    "min": 0,
+    "max": 500,
+    "default": 90,
+    "step": 5,
+    "unit": " ms",
+    "showifOr": [
+     "Preset",
+     [
+      "Linear",
+      "Ease In",
+      "Ease Out",
+      "Ease In Out",
+      "Snap",
+      "Hesitate"
+     ]
+    ],
+    "group": "Timing"
+   }
+  ]
+ },
+ "Fake Lag": {
+  "description": "Holds your movement packets and sends them in bursts, so others see you lag.",
+  "settings": [
+   {
+    "key": "Pulse Mode",
+    "type": "check",
+    "label": "Pulse",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Flush On Damage",
+    "type": "check",
+    "label": "Send when hurt",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Flush On Eat",
+    "type": "check",
+    "label": "Send when eating",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Flush On Knockback",
+    "type": "check",
+    "label": "Send on knockback",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Flush On Hit",
+    "type": "check",
+    "label": "Send when you hit",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Delay",
+    "type": "minmax",
+    "label": "Hold time",
+    "info": "How long to hold before sending.",
+    "min": 0,
+    "max": 1000,
+    "low": 200,
+    "high": 400,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Pulse Duration",
+    "type": "minmax",
+    "label": "Pulse gap",
+    "min": 0,
+    "max": 1000,
+    "low": 200,
+    "high": 400,
+    "unit": " ms",
+    "showif": [
+     "Pulse Mode",
+     true
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Render",
+    "type": "check",
+    "label": "Show server position",
+    "info": "Draws a preview in the world.",
+    "default": false,
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Mode",
+    "type": "select",
+    "label": "Preview style",
+    "options": [
+     "Box",
+     "Shader"
+    ],
+    "default": "Box",
+    "optionLabels": {
+     "Box": "Box",
+     "Shader": "Outline"
+    },
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Color",
+    "type": "color",
+    "label": "Preview colour",
+    "default": "#3a7fcc",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   }
+  ]
+ },
+ "Hit Swap": {
+  "description": "Swaps to a mace when you hit something, so the hit uses the mace's damage.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Mace to use",
+    "options": [
+     "Breach",
+     "Density",
+     "Dynamic",
+     "Any"
+    ],
+    "default": "Breach",
+    "optionLabels": {
+     "Dynamic": "Best for the fall",
+     "Breach": "Breach",
+     "Density": "Density",
+     "Any": "Any mace"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Stun Slam",
+    "type": "check",
+    "label": "Shield stun slam",
+    "info": "Uses the slam to stun a blocking shield.",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Dynamic Threshold",
+    "type": "range",
+    "label": "Smart fall threshold",
+    "min": -1.0,
+    "max": -0.05,
+    "default": -0.25,
+    "step": 0.01,
+    "showif": [
+     "Mode",
+     "Dynamic"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Targets",
+    "type": "multiselect",
+    "label": "Swap for",
+    "options": [
+     "Players",
+     "Mobs",
+     "Entities"
+    ],
+    "default": [
+     "Players",
+     "Mobs",
+     "Entities"
+    ],
+    "group": "Targeting"
+   },
+   {
+    "key": "Swap Delay",
+    "type": "minmax",
+    "label": "Switch delay",
+    "info": "Wait before switching items.",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 0,
+    "unit": " ms",
+    "showif": [
+     "Stun Slam",
+     false
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 50,
+    "max": 500,
+    "low": 100,
+    "high": 150,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Only Weapon",
+    "type": "check",
+    "label": "Weapon in hand only",
+    "info": "Only works with a sword, axe, mace or spear in hand.",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Check Shield",
+    "type": "check",
+    "label": "Hold off on shields",
+    "info": "Doesn't swap for players who are blocking with a shield.",
+    "default": false,
+    "showif": [
+     "Stun Slam",
+     false
+    ],
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Kill Aura": {
+  "description": "Turns toward and attacks targets around you, with human-like aim.",
+  "settings": [
+   {
+    "key": "Range",
+    "type": "range",
+    "label": "Search range",
+    "info": "How far away a target can be.",
+    "min": 1,
+    "max": 20,
+    "default": 6,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "FOV",
+    "type": "range",
+    "label": "Field of view",
+    "info": "Only targets within this angle of where you look.",
+    "min": 1,
+    "max": 360,
+    "default": 360,
+    "unit": "°",
+    "group": "Targeting"
+   },
+   {
+    "key": "Attack Range",
+    "type": "range",
+    "label": "Hit range",
+    "info": "How close the target must be to hit.",
+    "min": 1.0,
+    "max": 6.0,
+    "default": 3.0,
+    "step": 0.1,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Attack Through Walls",
+    "type": "check",
+    "label": "Hit through walls",
+    "info": "Hits targets you can't see.",
+    "default": false,
+    "group": "Targeting"
+   },
+   {
+    "key": "Horizontal Speed",
+    "type": "range",
+    "label": "Yaw speed",
+    "info": "How quickly it turns you left and right.",
+    "min": 1,
+    "max": 20,
+    "default": 15,
+    "group": "Aim"
+   },
+   {
+    "key": "Aim Horizontally",
+    "type": "check",
+    "label": "Turn sideways",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Vertical Speed",
+    "type": "range",
+    "label": "Pitch speed",
+    "info": "How quickly it turns you up and down.",
+    "min": 1,
+    "max": 20,
+    "default": 15,
+    "showif": [
+     "Aim Vertically",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Aim Vertically",
+    "type": "check",
+    "label": "Turn up and down",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Humanize",
+    "type": "check",
+    "label": "Human-like",
+    "info": "Adds small human-like imperfections.",
+    "default": true,
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Aim At",
+    "type": "select",
+    "label": "Aim point",
+    "info": "Which part of the target to aim at.",
+    "options": [
+     "Dynamic",
+     "Closest",
+     "Center",
+     "Head",
+     "Chest",
+     "Legs",
+     "Random"
+    ],
+    "default": "Dynamic",
+    "optionLabels": {
+     "Dynamic": "Smart",
+     "Closest": "Nearest point",
+     "Center": "Middle",
+     "Random": "Anywhere"
+    },
+    "group": "Aim"
+   },
+   {
+    "key": "Head Weight",
+    "type": "range",
+    "label": "Head bias",
+    "min": 0,
+    "max": 100,
+    "default": 30,
+    "unit": "%",
+    "showif2": [
+     "Humanize",
+     true,
+     "Aim At",
+     "Dynamic"
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Body Weight",
+    "type": "range",
+    "label": "Body bias",
+    "min": 0,
+    "max": 100,
+    "default": 50,
+    "unit": "%",
+    "showif2": [
+     "Humanize",
+     true,
+     "Aim At",
+     "Dynamic"
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Legs Weight",
+    "type": "range",
+    "label": "Legs bias",
+    "min": 0,
+    "max": 100,
+    "default": 20,
+    "unit": "%",
+    "showif2": [
+     "Humanize",
+     true,
+     "Aim At",
+     "Dynamic"
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Point Change",
+    "type": "minmax",
+    "label": "New aim point every",
+    "info": "How often it picks a new spot on the target.",
+    "min": 100,
+    "max": 3000,
+    "low": 500,
+    "high": 1400,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Point Drift",
+    "type": "range",
+    "label": "Aim point wander",
+    "info": "How much the aim spot wanders between picks.",
+    "min": 1,
+    "max": 100,
+    "default": 40,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Hitbox Margin",
+    "type": "range",
+    "label": "Edge padding",
+    "info": "Keeps the aim spot away from the hitbox edge.",
+    "min": 0,
+    "max": 40,
+    "default": 15,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Randomization",
+    "type": "range",
+    "label": "Aim spread",
+    "info": "How spread out aim spots are.",
+    "min": 0,
+    "max": 100,
+    "default": 40,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Jitter",
+    "type": "range",
+    "label": "Shake",
+    "info": "Small random shakes in the aim.",
+    "min": 0,
+    "max": 100,
+    "default": 30,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Overshoot",
+    "type": "range",
+    "label": "Overswing",
+    "info": "Sometimes turns a little too far, then corrects.",
+    "min": 0,
+    "max": 100,
+    "default": 25,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Speed Variation",
+    "type": "range",
+    "label": "Speed wobble",
+    "info": "Varies turn speed from moment to moment.",
+    "min": 0,
+    "max": 100,
+    "default": 30,
+    "unit": "%",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Max Turn Speed",
+    "type": "range",
+    "label": "Turn speed cap",
+    "info": "The fastest it will ever turn you.",
+    "min": 100,
+    "max": 2000,
+    "default": 800,
+    "unit": "°",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim",
+    "fixed": true
+   },
+   {
+    "key": "Reaction Delay",
+    "type": "minmax",
+    "label": "Reaction time",
+    "info": "Pause before reacting to a new target.",
+    "min": 0,
+    "max": 500,
+    "low": 60,
+    "high": 180,
+    "unit": " ms",
+    "showif": [
+     "Humanize",
+     true
+    ],
+    "group": "Aim"
+   },
+   {
+    "key": "Max Pitch",
+    "type": "range",
+    "label": "Pitch limit",
+    "info": "Never looks further up or down than this.",
+    "min": 10,
+    "max": 90,
+    "default": 90,
+    "unit": "°",
+    "group": "Aim"
+   },
+   {
+    "key": "Prioritize Criticals",
+    "type": "check",
+    "label": "Wait for crits",
+    "info": "Waits for a falling hit when one is coming.",
+    "default": true,
+    "group": "Timing"
+   },
+   {
+    "key": "Cooldown Threshold",
+    "type": "minmax",
+    "label": "Attack charge",
+    "info": "How charged your attack must be before it hits.",
+    "min": 0.85,
+    "max": 1,
+    "low": 0.85,
+    "high": 1,
+    "step": 0.01,
+    "scale": 100.0,
+    "unit": "%",
+    "group": "Timing"
+   },
+   {
+    "key": "Extra Delay",
+    "type": "minmax",
+    "label": "Added delay",
+    "info": "Random extra wait before each hit.",
+    "min": 0,
+    "max": 400,
+    "low": 0,
+    "high": 0,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Only When Aimed",
+    "type": "check",
+    "label": "Only hit when on target",
+    "info": "Waits until your aim is on the target.",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Check Shielding",
+    "type": "check",
+    "label": "Hold off on shields",
+    "info": "Doesn't hit players who are blocking with a shield.",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Only Weapon",
+    "type": "check",
+    "label": "Weapon in hand only",
+    "info": "Only works with a sword, axe, mace or spear in hand.",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Not in GUI",
+    "type": "check",
+    "label": "Pause in menus",
+    "info": "Does nothing while a menu or inventory is open.",
+    "default": true,
+    "group": "Conditions",
+    "fixed": true
+   },
+   {
+    "key": "Not While Using",
+    "type": "check",
+    "label": "Pause while using items",
+    "info": "Does nothing while you eat, drink, block or draw a bow.",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "MoveFix": {
+  "description": "Keeps your movement matching the direction the server thinks you are facing.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Correction",
+    "options": [
+     "Silent",
+     "Strict"
+    ],
+    "default": "Silent",
+    "optionLabels": {
+     "Silent": "Loose",
+     "Strict": "Strict"
+    },
+    "group": "General"
+   }
+  ]
+ },
+ "Pearl Clutch": {
+  "description": "Throws an ender pearl to save you and then goes back to the slot you had.",
+  "settings": [
+   {
+    "key": "Anti Ghost",
+    "type": "check",
+    "label": "Avoid ghost throws",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Auto Disable",
+    "type": "check",
+    "label": "Turn off after throwing",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Throw Delay",
+    "type": "minmax",
+    "label": "Throw delay",
+    "min": 0,
+    "max": 500,
+    "low": 50,
+    "high": 100,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": true,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching items.",
+    "min": 0,
+    "max": 500,
+    "low": 0,
+    "high": 50,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   }
+  ]
+ },
+ "Piercing": {
+  "description": "Lets your clicks go through blocks and entities in the way.",
+  "settings": [
+   {
+    "key": "Blocks",
+    "type": "check",
+    "label": "Through blocks",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Interact",
+    "type": "check",
+    "label": "Use items through",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Sort Targets By",
+    "type": "select",
+    "label": "Pick target by",
+    "options": [
+     "Hurt Time",
+     "Health"
+    ],
+    "default": "Hurt Time",
+    "optionLabels": {
+     "Hurt Time": "Least recently hurt",
+     "Health": "Lowest health"
+    },
+    "group": "Targeting"
+   },
+   {
+    "key": "Players",
+    "type": "check",
+    "label": "Players",
+    "default": true,
+    "group": "Targeting"
+   },
+   {
+    "key": "Hostile Mobs",
+    "type": "check",
+    "label": "Hostile mobs",
+    "default": false,
+    "group": "Targeting"
+   },
+   {
+    "key": "Passive Mobs",
+    "type": "check",
+    "label": "Passive mobs",
+    "default": false,
+    "group": "Targeting"
+   }
+  ]
+ },
+ "Reach": {
+  "description": "Lets you hit and build a little further away.",
+  "settings": [
+   {
+    "key": "Block Reach",
+    "type": "range",
+    "label": "Build reach",
+    "info": "How far you can place and break blocks.",
+    "min": 3.0,
+    "max": 6.0,
+    "default": 4.5,
+    "step": 0.1,
+    "unit": " b",
+    "group": "General"
+   },
+   {
+    "key": "Entity Reach",
+    "type": "range",
+    "label": "Hit reach",
+    "info": "How far you can hit.",
+    "min": 3.0,
+    "max": 6.0,
+    "default": 3.0,
+    "step": 0.1,
+    "unit": " b",
+    "group": "General"
+   }
+  ]
+ },
+ "Shield Breaker": {
+  "description": "Swaps to an axe to knock down a raised shield.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Action",
+    "options": [
+     "Normal",
+     "Stun"
+    ],
+    "default": "Normal",
+    "optionLabels": {
+     "Normal": "Break",
+     "Stun": "Break and stun"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Delay",
+    "type": "minmax",
+    "label": "Axe swap delay",
+    "info": "How long to hold before sending.",
+    "min": 1,
+    "max": 250,
+    "low": 50,
+    "high": 75,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Swap Back",
+    "type": "check",
+    "label": "Return to last slot",
+    "info": "Switches back to the slot you had before.",
+    "default": false,
+    "group": "Inventory"
+   },
+   {
+    "key": "Swap Back Delay",
+    "type": "minmax",
+    "label": "Return delay",
+    "info": "Wait before switching back.",
+    "min": 1,
+    "max": 250,
+    "low": 50,
+    "high": 75,
+    "unit": " ms",
+    "showif": [
+     "Swap Back",
+     true
+    ],
+    "group": "Inventory"
+   },
+   {
+    "key": "Not in GUI",
+    "type": "check",
+    "label": "Pause in menus",
+    "info": "Does nothing while a menu or inventory is open.",
+    "default": true,
+    "group": "Conditions",
+    "fixed": true
+   },
+   {
+    "key": "Not While Using",
+    "type": "check",
+    "label": "Pause while using items",
+    "info": "Does nothing while you eat, drink, block or draw a bow.",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Speed": {
+  "description": "Makes you move faster on the ground.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Method",
+    "options": [
+     "Normal",
+     "Grim Collision"
+    ],
+    "default": "Normal",
+    "optionLabels": {
+     "Normal": "Strafe",
+     "Grim Collision": "Grim collision"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Speed",
+    "type": "range",
+    "label": "Ground speed",
+    "min": 1,
+    "max": 20,
+    "default": 4,
+    "showif": [
+     "Mode",
+     "Normal"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Boost Speed",
+    "type": "range",
+    "label": "Boost",
+    "min": 0.01,
+    "max": 0.08,
+    "default": 0.08,
+    "step": 0.01,
+    "showif": [
+     "Mode",
+     "Grim Collision"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Shrink Box",
+    "type": "range",
+    "label": "Collision box size",
+    "min": 0.1,
+    "max": 2,
+    "default": 0.5,
+    "step": 0.1,
+    "showif": [
+     "Mode",
+     "Grim Collision"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Collision Direction",
+    "type": "select",
+    "label": "Push direction",
+    "options": [
+     "Silent Look",
+     "Camera"
+    ],
+    "default": "Silent Look",
+    "optionLabels": {
+     "Silent Look": "Aim direction",
+     "Camera": "Camera direction"
+    },
+    "group": "General"
+   }
+  ]
+ },
+ "Sprint Reset": {
+  "description": "Briefly lets go of sprint after a hit so the next one deals full knockback.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Reset style",
+    "options": [
+     "W-Tap",
+     "S-Tap"
+    ],
+    "default": "W-Tap",
+    "optionLabels": {
+     "W-Tap": "Release forward",
+     "S-Tap": "Tap back"
+    },
+    "group": "General"
+   },
+   {
+    "key": "W-Tap Ground Only",
+    "type": "check",
+    "label": "Release on ground only",
+    "default": false,
+    "showif": [
+     "Mode",
+     "W-Tap"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "S-Tap Ground Only",
+    "type": "check",
+    "label": "Back tap on ground only",
+    "default": false,
+    "showif": [
+     "Mode",
+     "S-Tap"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "W-Tap Duration",
+    "type": "range",
+    "label": "Release length",
+    "min": 1,
+    "max": 20,
+    "default": 3,
+    "unit": " t",
+    "showif": [
+     "Mode",
+     "W-Tap"
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "W-Tap Reaction",
+    "type": "range",
+    "label": "Release after",
+    "min": 0,
+    "max": 20,
+    "default": 0,
+    "unit": " t",
+    "showif": [
+     "Mode",
+     "W-Tap"
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "S-Tap Duration",
+    "type": "range",
+    "label": "Back tap length",
+    "min": 1,
+    "max": 20,
+    "default": 3,
+    "unit": " t",
+    "showif": [
+     "Mode",
+     "S-Tap"
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "S-Tap Reaction",
+    "type": "range",
+    "label": "Back tap after",
+    "min": 0,
+    "max": 20,
+    "default": 0,
+    "unit": " t",
+    "showif": [
+     "Mode",
+     "S-Tap"
+    ],
+    "group": "Timing"
+   },
+   {
+    "key": "Only Sword",
+    "type": "check",
+    "label": "Sword only",
+    "default": false,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Target Strafe": {
+  "description": "Circles around your target at a set distance.",
+  "settings": [
+   {
+    "key": "Activation",
+    "type": "select",
+    "label": "Strafe while",
+    "options": [
+     "Holding Forward",
+     "Holding Jump",
+     "Always"
+    ],
+    "default": "Holding Forward",
+    "optionLabels": {
+     "Holding Forward": "Holding forward",
+     "Holding Jump": "Holding jump",
+     "Always": "Always"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Start Direction",
+    "type": "select",
+    "label": "Start going",
+    "options": [
+     "Left",
+     "Right"
+    ],
+    "default": "Left",
+    "group": "General"
+   },
+   {
+    "key": "Manual Direction",
+    "type": "check",
+    "label": "Steer with A and D",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Switch On Collision",
+    "type": "check",
+    "label": "Turn around at walls",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Avoid Edges",
+    "type": "check",
+    "label": "Stay off edges",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Prediction",
+    "type": "check",
+    "label": "Lead the target",
+    "info": "Circles where the target is going.",
+    "default": true,
+    "group": "General"
+   },
+   {
+    "key": "Prediction Ticks",
+    "type": "range",
+    "label": "Lead amount",
+    "min": 0.0,
+    "max": 5.0,
+    "default": 2.0,
+    "step": 0.5,
+    "showif": [
+     "Prediction",
+     true
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Auto Jump",
+    "type": "check",
+    "label": "Jump while circling",
+    "default": false,
+    "group": "General"
+   },
+   {
+    "key": "Distance",
+    "type": "range",
+    "label": "Orbit distance",
+    "info": "How far from the target to circle.",
+    "min": 0.1,
+    "max": 6.0,
+    "default": 2.5,
+    "step": 0.1,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Range",
+    "type": "range",
+    "label": "Search range",
+    "info": "How far away a target can be.",
+    "min": 2.0,
+    "max": 16.0,
+    "default": 6.0,
+    "step": 0.5,
+    "unit": " b",
+    "group": "Targeting"
+   },
+   {
+    "key": "Only With Kill Aura",
+    "type": "check",
+    "label": "Only with Kill Aura",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Render",
+    "type": "check",
+    "label": "Show path",
+    "info": "Draws a preview in the world.",
+    "default": true,
+    "group": "Visuals"
+   },
+   {
+    "key": "Render Color",
+    "type": "color",
+    "label": "Path colour",
+    "default": "#3a7fcc",
+    "showif": [
+     "Render",
+     true
+    ],
+    "group": "Visuals"
+   }
+  ]
+ },
+ "Targets": {
+  "description": "Decides which entity the combat modules pick when several are in range.",
+  "settings": [
+   {
+    "key": "Mode",
+    "type": "select",
+    "label": "Pick",
+    "options": [
+     "Nearest",
+     "Lowest HP",
+     "Last Hit"
+    ],
+    "default": "Nearest",
+    "optionLabels": {
+     "Nearest": "Closest",
+     "Lowest HP": "Weakest",
+     "Last Hit": "Last one I hit"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Don't Target Dead",
+    "type": "check",
+    "label": "Skip dying entities",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Survival Only",
+    "type": "check",
+    "label": "Skip creative players",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Ignore Invisible",
+    "type": "check",
+    "label": "Skip invisible",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Triggerbot": {
+  "description": "Attacks whatever your crosshair is on, when your hit is charged.",
+  "settings": [
+   {
+    "key": "Prioritize Criticals",
+    "type": "check",
+    "label": "Wait for crits",
+    "info": "Waits for a falling hit when one is coming.",
+    "default": true,
+    "group": "Timing"
+   },
+   {
+    "key": "Cooldown Threshold",
+    "type": "minmax",
+    "label": "Attack charge",
+    "info": "How charged your attack must be before it hits.",
+    "min": 0.85,
+    "max": 1,
+    "low": 0.9,
+    "high": 1,
+    "step": 0.01,
+    "scale": 100.0,
+    "unit": "%",
+    "group": "Timing"
+   },
+   {
+    "key": "Extra Delay",
+    "type": "minmax",
+    "label": "Added delay",
+    "info": "Random extra wait before each hit.",
+    "min": 0,
+    "max": 400,
+    "low": 0,
+    "high": 0,
+    "unit": " ms",
+    "group": "Timing"
+   },
+   {
+    "key": "Only Weapon",
+    "type": "check",
+    "label": "Weapon in hand only",
+    "info": "Only works with a sword, axe, mace or spear in hand.",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Check Shielding",
+    "type": "check",
+    "label": "Hold off on shields",
+    "info": "Doesn't hit players who are blocking with a shield.",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Require Mousedown",
+    "type": "check",
+    "label": "Only while holding attack",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Not in GUI",
+    "type": "check",
+    "label": "Pause in menus",
+    "info": "Does nothing while a menu or inventory is open.",
+    "default": true,
+    "group": "Conditions",
+    "fixed": true
+   },
+   {
+    "key": "Not While Using",
+    "type": "check",
+    "label": "Pause while using items",
+    "info": "Does nothing while you eat, drink, block or draw a bow.",
+    "default": true,
+    "group": "Conditions"
+   }
+  ]
+ },
+ "Time Freeze": {
+  "description": "Holds the game's network traffic back, then lets it go, so you can do things that normally are not possible.",
+  "settings": [
+   {
+    "key": "Release Mode",
+    "type": "select",
+    "label": "Release style",
+    "info": "How held packets are let out.",
+    "options": [
+     "Flow",
+     "One by One",
+     "Tick",
+     "Up/Down",
+     "Jetpack",
+     "Steady"
+    ],
+    "default": "Flow",
+    "optionLabels": {
+     "Flow": "Flow",
+     "One by One": "One at a time",
+     "Tick": "Per tick",
+     "Up/Down": "Up and down",
+     "Jetpack": "Jetpack",
+     "Steady": "Steady"
+    },
+    "group": "General"
+   },
+   {
+    "key": "Release Key",
+    "type": "keybind",
+    "label": "Release key",
+    "info": "Hold to let packets out.",
+    "default": "NONE",
+    "group": "General"
+   },
+   {
+    "key": "Flow Speed",
+    "type": "range",
+    "label": "Flow rate",
+    "min": 1,
+    "max": 20,
+    "default": 3,
+    "showif": [
+     "Release Mode",
+     "Flow"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Release Speed",
+    "type": "range",
+    "label": "Release rate",
+    "min": 1,
+    "max": 40,
+    "default": 2,
+    "showif": [
+     "Release Mode",
+     "Steady"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Interval",
+    "type": "range",
+    "label": "Interval",
+    "min": 1,
+    "max": 100,
+    "default": 5,
+    "showifOr": [
+     "Release Mode",
+     [
+      "One by One",
+      "Tick",
+      "Up/Down",
+      "Jetpack"
+     ]
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Delay",
+    "type": "range",
+    "label": "Release delay",
+    "info": "How long to hold before sending.",
+    "min": 1,
+    "max": 100,
+    "default": 10,
+    "unit": " t",
+    "showif": [
+     "Release Mode",
+     "Up/Down"
+    ],
+    "group": "General"
+   },
+   {
+    "key": "Disable On Flag",
+    "type": "check",
+    "label": "Off when set back",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Disable On Death",
+    "type": "check",
+    "label": "Off when you die",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Disable On Connect",
+    "type": "check",
+    "label": "Off when joining",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Disable On Dimension Change",
+    "type": "check",
+    "label": "Off when changing dimension",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Queue Timeout",
+    "type": "range",
+    "label": "Hold timeout",
+    "info": "Sends everything if it has held for this long.",
+    "min": 0,
+    "max": 120,
+    "default": 29,
+    "unit": " s",
+    "group": "Conditions"
+   },
+   {
+    "key": "Flush All On Timeout",
+    "type": "check",
+    "label": "Send everything at the limit",
+    "default": false,
+    "group": "Conditions"
+   },
+   {
+    "key": "Safe Release On Timeout",
+    "type": "check",
+    "label": "Release safely at the limit",
+    "default": true,
+    "group": "Conditions"
+   },
+   {
+    "key": "Ghost Entities",
+    "type": "check",
+    "label": "Track real positions",
+    "default": true,
+    "group": "Visuals"
+   },
+   {
+    "key": "Ghost ESP",
+    "type": "check",
+    "label": "Box real positions",
+    "info": "Draws a box where other players really are.",
+    "default": true,
+    "showif": [
+     "Ghost Entities",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Ghost Alpha",
+    "type": "range",
+    "label": "Ghost alpha",
+    "min": 0,
+    "max": 255,
+    "default": 60,
+    "showif2": [
+     "Ghost Entities",
+     true,
+     "Ghost ESP",
+     true
+    ],
+    "group": "Visuals",
+    "fixed": true
+   },
+   {
+    "key": "Ghost Opacity",
+    "type": "range",
+    "label": "Box strength",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6,
+    "step": 0.05,
+    "scale": 100.0,
+    "unit": "%",
+    "showif2": [
+     "Ghost Entities",
+     true,
+     "Ghost ESP",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Ghost Color",
+    "type": "color",
+    "label": "Box colour",
+    "default": "#64b4ff",
+    "showif2": [
+     "Ghost Entities",
+     true,
+     "Ghost ESP",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Block Diff",
+    "type": "check",
+    "label": "Show changed blocks",
+    "info": "Marks blocks that changed while frozen.",
+    "default": true,
+    "group": "Visuals"
+   },
+   {
+    "key": "Block Diff Color",
+    "type": "color",
+    "label": "Changed block colour",
+    "default": "#FF4D4D",
+    "showif": [
+     "Block Diff",
+     true
+    ],
+    "group": "Visuals"
+   },
+   {
+    "key": "Advanced Packet Control",
+    "type": "check",
+    "label": "Choose what is held",
+    "info": "Pick exactly which packets are held.",
+    "default": false,
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Transactions",
+    "type": "check",
+    "label": "Hold transactions",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Entity Movement",
+    "type": "check",
+    "label": "Hold entity movement",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Entity Lifecycle",
+    "type": "check",
+    "label": "Hold entity lifecycle",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Entity State",
+    "type": "check",
+    "label": "Hold entity state",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Velocity",
+    "type": "check",
+    "label": "Hold velocity",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Blocks",
+    "type": "check",
+    "label": "Hold blocks",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Game State",
+    "type": "check",
+    "label": "Hold game state",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Inventory",
+    "type": "check",
+    "label": "Hold inventory",
+    "default": true,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Entity Events",
+    "type": "check",
+    "label": "Hold entity events",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Health",
+    "type": "check",
+    "label": "Hold health",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Experience",
+    "type": "check",
+    "label": "Hold experience",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Cooldowns",
+    "type": "check",
+    "label": "Hold cooldowns",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Held Slot",
+    "type": "check",
+    "label": "Hold held slot",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Camera",
+    "type": "check",
+    "label": "Hold camera",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Queue Combat Events",
+    "type": "check",
+    "label": "Hold combat events",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Never Queue Inventory",
+    "type": "check",
+    "label": "Always send inventory",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Never Queue Velocity",
+    "type": "check",
+    "label": "Always send velocity",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   },
+   {
+    "key": "Never Queue Blocks",
+    "type": "check",
+    "label": "Always send blocks",
+    "default": false,
+    "showif": [
+     "Advanced Packet Control",
+     true
+    ],
+    "group": "Packets",
+    "fixed": true
+   }
+  ]
+ }
+}

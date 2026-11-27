@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+  <rect width="560" height="300" fill="#0B0D11"/>
+  <defs>
+    <g id="fmark">
+      <rect x="0" y="20" width="128" height="22" rx="8" fill="#E9B949"/>
+      <rect x="52" y="20" width="24" height="112" rx="9" fill="#E9B949"/>
+      <rect x="10" y="56" width="18" height="60" rx="8" fill="#E9B949" opacity="0.5"/>
+      <rect x="100" y="56" width="18" height="60" rx="8" fill="#E9B949" opacity="0.5"/>
+    </g>
+  </defs>
+  <use href="#fmark" transform="translate(48,74)"/>
+  <use href="#fmark" transform="translate(240,150) scale(0.24)"/>
+  <use href="#fmark" transform="translate(240,190) scale(0.12)"/>
+  <text x="240" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="44" font-weight="700" fill="#E9B949">TEMPLE<tspan fill="#6F7686">.RIP</tspan></text>
+  <text x="300" y="168" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">32px</text>
+  <text x="270" y="202" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">16px</text>
+  <text x="48" y="232" font-family="Inter, sans-serif" font-size="14" fill="#6F7686">F - Geometric columns forming a T (cleanest, most "brand")</text>
+</svg>

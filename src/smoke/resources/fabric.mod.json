@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "temple_smoke",
+  "version": "1.0.0",
+  "name": "Temple startup smoke test",
+  "environment": "client",
+  "entrypoints": { "client": ["nz.temple.smoke.StartupSmoke"] },
+  "mixins": ["temple_smoke.mixins.json"],
+  "depends": { "templenz": "*", "fabric-api": "*" }
+}

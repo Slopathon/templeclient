@@ -1,0 +1,15 @@
+{
+	"providers": [
+		{
+			"type": "ttf",
+			"file": "templenz:inter_semibold.ttf",
+			"size": 16.0,
+			"oversample": 0.875,
+			"shift": [
+				0.0,
+				0.0
+			],
+			"skip": ""
+		}
+	]
+}

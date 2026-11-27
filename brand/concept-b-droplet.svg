@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#FFF6DC"/><stop offset="0.5" stop-color="#E9B949"/><stop offset="1" stop-color="#9C6B14"/>
+    </linearGradient>
+    <radialGradient id="spec" cx="0.35" cy="0.28" r="0.4">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="#0C0E13"/>
+  <g transform="translate(150,70)">
+    <path d="M88 0 C88 0 172 96 172 140 A84 84 0 1 1 4 140 C4 96 88 0 88 0 Z" fill="url(#g2)"/>
+    <path d="M88 0 C88 0 172 96 172 140 A84 84 0 1 1 4 140 C4 96 88 0 88 0 Z" fill="url(#spec)"/>
+    <path d="M44 120 H132 M88 120 V196" stroke="#0C0E13" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <text x="360" y="178" font-family="Inter, Segoe UI, sans-serif" font-size="58" font-weight="700" fill="url(#g2)">Temple</text>
+  <text x="360" y="222" font-family="Inter, Segoe UI, sans-serif" font-size="30" font-weight="500" fill="#8E96A6" letter-spacing="9">.RIP</text>
+</svg>

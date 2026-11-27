@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="720" height="340">
+  <rect width="720" height="340" fill="#0B0D11"/>
+  <defs>
+    <path id="d1" d="M64 0 L128 44 L128 68 L78 68 L78 138 L50 138 L50 68 L0 68 L0 44 Z"/>
+  </defs>
+
+  <g transform="translate(40,60)">
+    <use href="#d1" fill="#E9B949"/>
+  </g>
+  <text x="40" y="242" font-family="Inter,sans-serif" font-size="13" fill="#5A6070">silhouette (one closed path)</text>
+
+  <g transform="translate(220,60)">
+    <use href="#d1" fill="#B8861F"/>
+    <path d="M64 0 L0 44 L0 68 L50 68 L50 138 L64 138 Z" fill="#E9B949"/>
+    <path d="M64 0 L14 34 L0 44 L0 40 Z" fill="#FFE3A1"/>
+    <path d="M64 8 L118 45 L64 45 Z" fill="#8A5F14" opacity="0.55"/>
+    <path d="M64 8 L10 45 L64 45 Z" fill="#FFE3A1" opacity="0.35"/>
+    <path d="M50 68 L64 68 L64 138 L50 138 Z" fill="#FFD98A" opacity="0.5"/>
+  </g>
+  <text x="220" y="242" font-family="Inter,sans-serif" font-size="13" fill="#5A6070">bevelled (chisel facets)</text>
+
+  <g transform="translate(410,62)">
+    <g fill="#4A3208">
+      <use href="#d1" transform="translate(14,14)"/><use href="#d1" transform="translate(12,12)"/>
+      <use href="#d1" transform="translate(10,10)"/><use href="#d1" transform="translate(8,8)"/>
+    </g>
+    <g fill="#8A5F14">
+      <use href="#d1" transform="translate(6,6)"/><use href="#d1" transform="translate(4,4)"/>
+      <use href="#d1" transform="translate(2,2)"/>
+    </g>
+    <use href="#d1" fill="#E9B949"/>
+    <path d="M64 0 L0 44 L0 52 L64 8 Z" fill="#FFE3A1"/>
+  </g>
+  <text x="410" y="242" font-family="Inter,sans-serif" font-size="13" fill="#5A6070">extruded preview</text>
+
+  <g transform="translate(618,150)"><use href="#d1" fill="#E9B949" transform="scale(0.34)"/></g>
+  <g transform="translate(618,204)"><use href="#d1" fill="#E9B949" transform="scale(0.12)"/></g>
+  <text x="662" y="176" font-family="Inter,sans-serif" font-size="12" fill="#5A6070">44px</text>
+  <text x="640" y="214" font-family="Inter,sans-serif" font-size="12" fill="#5A6070">16px</text>
+
+  <text x="40" y="290" font-family="Inter,sans-serif" font-size="30" font-weight="800" fill="#E9B949">TEMPLE<tspan fill="#6F7686">.RIP</tspan></text>
+  <text x="40" y="316" font-family="Inter,sans-serif" font-size="14" fill="#6F7686">D1 - Monolith: hard pediment, flat stance, zero decoration</text>
+</svg>

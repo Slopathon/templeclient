@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+  <rect width="560" height="300" fill="#0B0D11"/>
+  <defs>
+    <g id="dmark">
+      <path d="M8 26 L64 0 L120 26 L120 44 L74 44 L74 128 L54 128 L54 44 L8 44 Z" fill="#E9B949"/>
+      <rect x="20" y="56" width="12" height="60" rx="4" fill="#E9B949" opacity="0.55"/>
+      <rect x="96" y="56" width="12" height="60" rx="4" fill="#E9B949" opacity="0.55"/>
+    </g>
+  </defs>
+  <use href="#dmark" transform="translate(48,70)"/>
+  <use href="#dmark" transform="translate(240,150) scale(0.25)"/>
+  <use href="#dmark" transform="translate(240,190) scale(0.125)"/>
+  <text x="240" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="44" font-weight="700" fill="#E9B949">TEMPLE<tspan fill="#6F7686">.RIP</tspan></text>
+  <text x="300" y="168" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">32px</text>
+  <text x="270" y="202" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">16px</text>
+  <text x="48" y="232" font-family="Inter, sans-serif" font-size="14" fill="#6F7686">D - Pediment T (roof + stem, columns behind)</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+	"required": true,
+	"package": "nz.temple.smoke.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"PerfThrottleMixin",
+		"TrailerCameraMixin",
+		"TrailerFrameMixin",
+		"TrailerHudMixin",
+		"TrailerMouseAccessor",
+		"TrailerNameMixin",
+		"TrailerRenderMixin",
+		"TrailerServerAccessor",
+		"TrailerTimerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

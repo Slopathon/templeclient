@@ -1,0 +1,488 @@
+{
+  "ui.tap": {
+    "sounds": [
+      {
+        "name": "templenz:ui/tap1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/tap2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/tap3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.soft": {
+    "sounds": [
+      {
+        "name": "templenz:ui/soft1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/soft2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/soft3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.hover": {
+    "sounds": [
+      {
+        "name": "templenz:ui/hover1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/hover2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/hover3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.tick": {
+    "sounds": [
+      {
+        "name": "templenz:ui/tick1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/tick2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/tick3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.on": {
+    "sounds": [
+      {
+        "name": "templenz:ui/on1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/on2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/on3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.off": {
+    "sounds": [
+      {
+        "name": "templenz:ui/off1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/off2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/off3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.open": {
+    "sounds": [
+      {
+        "name": "templenz:ui/open1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/open2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/open3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.close": {
+    "sounds": [
+      {
+        "name": "templenz:ui/close1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/close2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/close3",
+        "preload": true
+      }
+    ]
+  },
+  "ui.pluck": {
+    "sounds": [
+      {
+        "name": "templenz:ui/pluck1",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/pluck2",
+        "preload": true
+      },
+      {
+        "name": "templenz:ui/pluck3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.pop": {
+    "sounds": [
+      {
+        "name": "templenz:hit/pop1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/pop2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/pop3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.punch": {
+    "sounds": [
+      {
+        "name": "templenz:hit/punch1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/punch2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/punch3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.crit": {
+    "sounds": [
+      {
+        "name": "templenz:hit/crit1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/crit2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/crit3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.tick": {
+    "sounds": [
+      {
+        "name": "templenz:hit/tick1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/tick2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/tick3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.thud": {
+    "sounds": [
+      {
+        "name": "templenz:hit/thud1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/thud2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/thud3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.snap": {
+    "sounds": [
+      {
+        "name": "templenz:hit/snap1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/snap2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/snap3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.crunch": {
+    "sounds": [
+      {
+        "name": "templenz:hit/crunch1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/crunch2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/crunch3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.coin": {
+    "sounds": [
+      {
+        "name": "templenz:hit/coin1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/coin2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/coin3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.ding": {
+    "sounds": [
+      {
+        "name": "templenz:hit/ding1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/ding2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/ding3",
+        "preload": true
+      }
+    ]
+  },
+  "hit.bubble": {
+    "sounds": [
+      {
+        "name": "templenz:hit/bubble1",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/bubble2",
+        "preload": true
+      },
+      {
+        "name": "templenz:hit/bubble3",
+        "preload": true
+      }
+    ]
+  },
+  "knife.bknife_draw01": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_draw01"
+      }
+    ]
+  },
+  "knife.bknife_draw02": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_draw02"
+      }
+    ]
+  },
+  "knife.bknife_look01_a": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look01_a"
+      }
+    ]
+  },
+  "knife.bknife_look01_ab": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look01_ab"
+      }
+    ]
+  },
+  "knife.bknife_look01_b": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look01_b"
+      }
+    ]
+  },
+  "knife.bknife_look02_a": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look02_a"
+      }
+    ]
+  },
+  "knife.bknife_look02_ab": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look02_ab"
+      }
+    ]
+  },
+  "knife.bknife_look02_b": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look02_b"
+      }
+    ]
+  },
+  "knife.bknife_look03_a": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look03_a"
+      }
+    ]
+  },
+  "knife.bknife_look03_ab": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look03_ab"
+      }
+    ]
+  },
+  "knife.bknife_look03_b": {
+    "sounds": [
+      {
+        "name": "templenz:knife/bknife_look03_b"
+      }
+    ]
+  },
+  "knife.knife_deploy1": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_deploy1"
+      }
+    ]
+  },
+  "knife.knife_push_attack1_heavy_01": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_attack1_heavy_01"
+      }
+    ]
+  },
+  "knife.knife_push_attack1_heavy_02": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_attack1_heavy_02"
+      }
+    ]
+  },
+  "knife.knife_push_attack1_heavy_03": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_attack1_heavy_03"
+      }
+    ]
+  },
+  "knife.knife_push_attack1_heavy_04": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_attack1_heavy_04"
+      }
+    ]
+  },
+  "knife.knife_push_draw": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_draw"
+      }
+    ]
+  },
+  "knife.knife_push_lookat_end": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_lookat_end"
+      }
+    ]
+  },
+  "knife.knife_push_lookat_start": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_push_lookat_start"
+      }
+    ]
+  },
+  "knife.knife_slash1": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_slash1"
+      }
+    ]
+  },
+  "knife.knife_slash2": {
+    "sounds": [
+      {
+        "name": "templenz:knife/knife_slash2"
+      }
+    ]
+  },
+  "knife.stilletto_draw_01": {
+    "sounds": [
+      {
+        "name": "templenz:knife/stilletto_draw_01"
+      }
+    ]
+  },
+  "knife.stilletto_flip_01": {
+    "sounds": [
+      {
+        "name": "templenz:knife/stilletto_flip_01"
+      }
+    ]
+  },
+  "knife.stilletto_flip_02": {
+    "sounds": [
+      {
+        "name": "templenz:knife/stilletto_flip_02"
+      }
+    ]
+  },
+  "knife.stilletto_flip_03": {
+    "sounds": [
+      {
+        "name": "templenz:knife/stilletto_flip_03"
+      }
+    ]
+  },
+  "knife.stilletto_flip_04": {
+    "sounds": [
+      {
+        "name": "templenz:knife/stilletto_flip_04"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "templenz",
+	"version": "${version}",
+	"name": "Temple.nz",
+	"description": "Liquid-glass utility client for anarchy servers.",
+	"authors": ["Temple.nz"],
+	"contact": {
+		"homepage": "https://temple.nz"
+	},
+	"license": "All-Rights-Reserved",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["nz.temple.client.TempleNzClient"]
+	},
+	"mixins": [
+		{
+			"config": "templenz.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "${mc_dep}",
+		"java": ">=${java_version}",
+		"fabric-api": "*"
+	}
+}

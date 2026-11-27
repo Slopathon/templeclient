@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+  <rect width="560" height="300" fill="#0B0D11"/>
+  <defs>
+    <g id="gmark">
+      <path d="M64 0 L128 34 L128 100 L64 134 L0 100 L0 34 Z" fill="#E9B949"/>
+      <path d="M22 40 H106 V58 H76 V104 H52 V58 H22 Z" fill="#0B0D11"/>
+      <path d="M64 0 L70 134 L58 134 Z" fill="#0B0D11" opacity="0.85"/>
+    </g>
+  </defs>
+  <use href="#gmark" transform="translate(48,72)"/>
+  <use href="#gmark" transform="translate(240,150) scale(0.24)"/>
+  <use href="#gmark" transform="translate(240,190) scale(0.12)"/>
+  <text x="240" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="44" font-weight="700" fill="#E9B949">TEMPLE<tspan fill="#6F7686">.RIP</tspan></text>
+  <text x="300" y="168" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">32px</text>
+  <text x="270" y="202" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">16px</text>
+  <text x="48" y="232" font-family="Inter, sans-serif" font-size="14" fill="#6F7686">G - Hex crest, T split by a crack (rip)</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300">
+  <rect width="560" height="300" fill="#0B0D11"/>
+  <defs>
+    <g id="emark">
+      <path d="M0 132 L0 58 A60 60 0 0 1 120 58 L120 132 Z" fill="#E9B949"/>
+      <path d="M26 44 H94 V64 H72 V112 H48 V64 H26 Z" fill="#0B0D11"/>
+    </g>
+  </defs>
+  <use href="#emark" transform="translate(52,68)"/>
+  <use href="#emark" transform="translate(240,150) scale(0.24)"/>
+  <use href="#emark" transform="translate(240,190) scale(0.12)"/>
+  <text x="240" y="120" font-family="Inter, Segoe UI, sans-serif" font-size="44" font-weight="700" fill="#E9B949">TEMPLE<tspan fill="#6F7686">.RIP</tspan></text>
+  <text x="300" y="168" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">32px</text>
+  <text x="270" y="202" font-family="Inter, sans-serif" font-size="13" fill="#5A6070">16px</text>
+  <text x="52" y="232" font-family="Inter, sans-serif" font-size="14" fill="#6F7686">E - Headstone with a T cut out (temple + rip)</text>
+</svg>

@@ -1,0 +1,90 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+
+def mc = stonecutter.current.version
+def obf = stonecutter.eval(mc, '<26')
+apply plugin: obf ? 'net.fabricmc.fabric-loom-remap' : 'net.fabricmc.fabric-loom'
+def jv = (project.property('java_version') as String).toInteger()
+def excluded = ((project.findProperty('mixins_excluded') ?: '') as String).split(',').collect { it.trim() }.findAll { it }
+version = "${project.property('mod_version')}+${mc}"
+group = 'nz.temple'
+base {
+	archivesName = 'temple-client'
+}
+repositories {
+	mavenCentral()
+}
+loom {
+	splitEnvironmentSourceSets()
+	mods {
+		templenz {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+	runs {
+		removeIf { it.name == 'server' }
+	}
+}
+sourceSets {
+	compileStubs {
+		java.srcDirs = [rootProject.file('src/compileStubs/java')]
+	}
+	client {
+		if (obf) {
+			java.srcDir(rootProject.file('src/shim-1.21.11/java'))
+		}
+		compileClasspath += compileStubs.output
+		java.exclude(excluded.collect { "nz/temple/client/mixin/${it}.java" })
+	}
+	test {
+		compileClasspath += main.output + client.output + client.compileClasspath
+		runtimeClasspath += main.output + client.output + client.runtimeClasspath
+	}
+}
+dependencies {
+	minecraft "com.mojang:minecraft:${mc}"
+	if (obf) {
+		mappings loom.officialMojangMappings()
+		modImplementation "net.fabricmc:fabric-loader:${project.property('loader_version')}"
+		modImplementation "net.fabricmc.fabric-api:fabric-api:${project.property('fabric_api_version')}"
+	} else {
+		implementation "net.fabricmc:fabric-loader:${project.property('loader_version')}"
+		implementation "net.fabricmc.fabric-api:fabric-api:${project.property('fabric_api_version')}"
+	}
+	include(implementation("fr.delthas:javamp3:${project.property('javamp3_version')}"))
+	testImplementation "org.junit.jupiter:junit-jupiter:${project.property('junit_version')}"
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+tasks.withType(JavaCompile).configureEach {
+	options.release = jv
+	options.encoding = 'UTF-8'
+}
+def props = [version: project.version, mc_dep: project.property('mc_dep'), java_version: jv]
+processResources {
+	inputs.properties props
+	filesMatching('fabric.mod.json') {
+		expand props
+	}
+}
+processClientResources {
+	inputs.properties props
+	inputs.property 'excluded', excluded.join(',')
+	filesMatching('templenz.client.mixins.json') {
+		expand props
+	}
+	doLast {
+		def f = new File(destinationDir, 'templenz.client.mixins.json')
+		def j = new JsonSlurper().parse(f)
+		['mixins', 'client', 'server'].each { k ->
+			if (j[k] instanceof List) {
+				j[k] = j[k].findAll { !excluded.contains(it) }
+			}
+		}
+		f.text = JsonOutput.prettyPrint(JsonOutput.toJson(j))
+	}
+}
+test {
+	useJUnitPlatform()
+	workingDir = rootProject.projectDir
+}
